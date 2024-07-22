@@ -1,0 +1,109 @@
+//software Xilinx ISE 14.7
+//Verlog test bench program for AND gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b1;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b1;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+
+//Verlog test bench program for OR gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b0;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b0;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\tA=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+
+//Verlog test bench program for NAND gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b0;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b0;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+
+//Verlog test bench program for NOR gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b0;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b0;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+
+//Verlog test bench program for XOR gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b0;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b0;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+//Verlog test bench program for XNOR gate
+module andg_gtb;
+reg A,B;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'B0;B=1'b0;
+#10A=1'b0;B=1'b1;
+#10A=1'b1;B=1'b0;
+#10A=1'b1;B=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,B,Y);
+endmodule
+//Verlog test bench program for NOT gate
+module andg_gtb;
+reg A;
+wire Y;
+andg andgate(.A(A),.B(B),.Y(Y));
+initial begin 
+A=1'b0;
+#10A=1'b1;
+#10
+$finish;
+end
+always@(y)
+$display("time=%0t\tINPUT VALUES:\t A=%b\t output value Y=%b",$time,A,Y);
+endmodule
