@@ -11,4 +11,4 @@ Objective
 The objective of the project Exploratory VLSI software to design basic digital logic circuit like AND gate OR gate NOT gate NAND gate etc.
 
 Software Used
-Xilimin 17.7
+Xilinx 14.7
